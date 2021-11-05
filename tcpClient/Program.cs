@@ -34,7 +34,7 @@ namespace tcpClient
                 string readD = Encoding.UTF8.GetString(datas, 0, res);
                 Console.WriteLine($"{DateTime.Now}-->{readD}");
             }
-           
+            
         }
     }
 }
