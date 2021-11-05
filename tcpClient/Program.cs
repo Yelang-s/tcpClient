@@ -16,9 +16,11 @@ namespace tcpClient
             //TcpClient tcpClient = new TcpClient("localhost", 7788);
             //TcpClient tcpClient1 = new TcpClient(new System.Net.IPEndPoint(IPAddress.Parse("127.0.0.1"), 7788));
 
-            TcpClient tcpClient3 = new TcpClient();
-            tcpClient3.ReceiveTimeout = 3000;
-            tcpClient3.SendTimeout = 3000;
+            TcpClient tcpClient3 = new TcpClient
+            {
+                ReceiveTimeout = 3000,
+                SendTimeout = 3000
+            };
             tcpClient3.Connect(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 7788));
 
             NetworkStream stream = tcpClient3.GetStream();
